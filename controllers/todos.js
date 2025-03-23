@@ -25,8 +25,8 @@ module.exports = {
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 completed: true
             })
-            console.log('Marked Complete')
-            res.json('Marked Complete')
+            console.log('Marked Complete (server)')
+            res.json('Marked Complete (client)')
         }catch(err){
             console.log(err)
         }
@@ -36,8 +36,8 @@ module.exports = {
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 completed: false
             })
-            console.log('Marked Incomplete')
-            res.json('Marked Incomplete')
+            console.log('Marked Incomplete (server)')
+            res.json('Marked Incomplete (client)')
         }catch(err){
             console.log(err)
         }
